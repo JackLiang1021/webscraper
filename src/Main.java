@@ -6,25 +6,40 @@ import java.net.MalformedURLException;
 
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Stack;
 
 
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        URL url = new URL("https://www.google.com/robots.txt");
+//        Stack<String> urls = new Stack<>();
+//
+//        urls.push("https://www.google.com/robots.txt");
+//
+//        while (!urls.empty()) {
+//
+//            URL url = new URL(urls.pop());
+//
+//            URLConnection con = url.openConnection();
+//            InputStream is = con.getInputStream();
+//
+//
+//            try (BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
+//                String line = null;
+//
+//                while ((line = br.readLine()) != null) {
+//                    if(line.contains("Allow: ")) {
+//                        System.out.println(line);
+//                    }
+//                }
+//
+//
+//            }
+//
+//        }
 
 
-        URLConnection con = url.openConnection();
-        InputStream is = con.getInputStream();
-
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
-            String line = null;
-
-            while ((line = br.readLine()) != null) {
-                System.out.println(line);
-            }
 
 
-        }
     }
 }
